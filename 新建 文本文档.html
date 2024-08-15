@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人网站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">主页</a></li>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#portfolio">作品</a></li>
+                <li><a href="#contact">联系</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <h1>欢迎来到我的个人网站</h1>
+        <p>这是我的个人介绍。</p>
+    </section>
+    <section id="about">
+        <h2>关于我</h2>
+        <p>这里是关于我的详细介绍。</p>
+    </section>
+    <section id="portfolio">
+        <h2>作品</h2>
+        <div class="gallery">
+            <div class="item">作品1</div>
+            <div class="item">作品2</div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>联系</h2>
+        <form>
+            <label for="name">姓名：</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">邮箱：</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">消息：</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">发送</button>
+        </form>
+    </section>
+    <script src="scripts.js"></script>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px 0;
+}
+
+#portfolio .gallery {
+    display: flex;
+    gap: 10px;
+}
+
+#portfolio .item {
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+}
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('感谢您的留言！');
+});
